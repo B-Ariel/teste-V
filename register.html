@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formuário Funcional</title>
+</head>
+
+<body class="home">
+    <div class="titles">
+        <h1>FORMULÁRIO FUNCIONAL</h1>
+        <hr style="color: rgb(255, 255, 255)">
+        <br>
+        <h3>Esse projeto tem essas especificações:</h3>
+        <h3>Front-end: HTML, CSS e JS</h3>
+        <h3>Back-end: PYTHON</h3>
+        <h3>SGBD: MYSQL</h3>
+    </div><br><br>
+
+    <!--"action='#'" é ignorado, porque o JS toma o controle-->
+    <form method="post" autocomplete="on">
+        <div id="errorMessage" class="error-message"></div>
+        <fieldset>
+            <legend>SE REGISTRE AQUI:</legend><br>
+            <!-- label - rótulo do campo, e o "for=..." conecta com o id do input-->
+            <label for="UserName">Nome de usuário:</label><br>
+            <input type="text" id="UserName" name="UserName" required placeholder="USUÁRIO AQUI..."
+                maxlength="50"><br><br>
+
+            <label for="PasswordUser">Senha do usuário:</label><br>
+            <input type="password" id="PasswordUser" name="PasswordUser" required placeholder="SENHA AQUI..."
+                maxlength="50"><br><br>
+
+            <label for="FirstName">Nome:</label><br>
+            <input type="text" id="FirstName" name="FirstName" required placeholder="NOME AQUI..."
+                maxlength="50"><br><br>
+
+            <label for="Surname">Sobrenome:</label><br>
+            <input type="text" id="Surname" name="Surname" placeholder="SOBRENOME AQUI..." maxlength="50"><br><br>
+
+            <label for="Email">E-mail:</label><br>
+            <input type="email" id="Email" name="Email" placeholder="E-MAIL AQUI..." required maxlength="50"><br><br>
+
+            <label for="Telephone">Telefone:</label><br>
+            <!--pattern="[0-9]{11}" - obriga número com 11 dígitos (BR style)-->
+            <input type="tel" id="Telephone" name="Telephone" placeholder="TELEFONE AQUI..." pattern="[0-9]{11}"
+                required maxlength="11"><br><br>
+
+            <label for="DateOfBirth">data de nascimento:</label><br>
+            <input type="date" id="DateOfBirth" name="DateOfBirth" min="1900-01-01" max="2100-01-01" required><br><br>
+
+            <label for="Gender">Gênero:</label><br>
+            <select name="Gender" id="Gender" required>
+                <option disabled>NÃO ESPECIFICADO</option>
+                <option value="NÃO DECLARAR">NÃO DECLARAR</option>
+                <option value="HOMEM">HOMEM</option>
+                <option value="MULHER">MULHER</option>
+                <option value="OUTRO">OUTRO</option>
+            </select><br><br>
+
+            <textarea name="CommentRecord" id="CommentRecord" rows="10" cols="30" maxlength="500" required
+                placeholder="Digite aqui algum comentário..."></textarea><br><br>
+
+            <input class="links" type="submit" value="Enviar">
+            <input class="links" type="reset" value="Limpar">
+
+            <br><br>
+        </fieldset>
+
+        <br>
+        <p style="color: rgb(255,255,255);">JÁ TEM UMA CONTA? SE SIM,<br><br>
+            <a class="links" href="index.html">FAÇA LOGIN AQUI</a>
+        </p>
+        <br>
+    </form>
+
+    <script src="app.js"></script> <!--Carrega o JS externo-->
+</body>
+
+</html>

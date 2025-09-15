@@ -1,0 +1,87 @@
+python3 - Linguagem de programação, usada pelo back-end
+
+MySQL - Linguagem para banco de dados relacionais (sql)
+Precisa também do conector do mysql com o python: pip install mysql-connector-python
+
+Flask – Microframework escrito em Python, projetado para o desenvolvimento ágil de aplicações web.
+Ele fornece uma arquitetura minimalista, mas extensível, permitindo a construção de APIs e sistemas web de forma escalável e modular.
+Instalação: pip install Flask
+
+Flask-CORS – Extensão para o Flask que implementa de forma simplificada o CORS (Cross-Origin Resource Sharing), mecanismo que define políticas de compartilhamento de recursos entre diferentes origens (domínios).
+Essencial para aplicações web que consomem APIs externas ou interagem com front-ends hospedados em domínios distintos.
+Instalação: pip install flask-cors
+
+JsPDF - Biblioteca para criar e manipular documentos PDF com JavaScript
+
+\-\-\-\-\-\-\-\-\-\
+
+link de referência:
+html e css:
+https://www.w3schools.com/
+https://www.youtube.com/watch?v=2O8pkybH6po&t=6s
+https://www.youtube.com/playlist?list=PLImJ3umGjxdDqTlZhQxXBeGij9Oa9Xjnj
+https://www.geeksforgeeks.org/
+
+js e JsPDF:
+https://developer.mozilla.org
+https://www.stanleyulili.com
+https://stackoverflow.com
+
+https://medium.com/
+https://www.youtube.com/watch?v=e7nXia_tZ4Y
+https://www.youtube.com/watch?v=cNlJCQHSmbE&pp=ygUMZmxhc2sgcHl0aG9u
+https://www.youtube.com/watch?v=In0nB0ABaUk
+https://www.youtube.com/playlist?list=PLImJ3umGjxdDqTlZhQxXBeGij9Oa9Xjnj
+https://dev.to/
+https://frontend.turing.edu/
+https://blog.logrocket.com/
+https://blog.stevenlevithan.com/
+https://www.npmjs.com/package/libphonenumber-js
+https://flask.palletsprojects.com/
+https://auth0.com/blog/
+
+https://www.nobledesktop.com/
+https://magicaldevschool.com/
+https://learnjavascript.today/
+https://www.telerik.com/blogs
+https://30dayscoding.com/
+https://jasonwatmore.com/
+https://www.youtube.com/watch?v=c3qWHnJJbSY
+https://rapidapi.com/guides
+https://horadecodar.com.br/
+https://www.youtube.com/watch?v=QKcVjdLEX_s
+https://www.youtube.com/watch?v=bBYM3KMuXC4
+https://www.youtube.com/watch?v=e_uE3WlYvYw
+https://www.freecodecamp.org/
+https://www.digitalocean.com/community/tutorials
+https://rafaelcouto.com.br/
+https://www.youtube.com/watch?v=G3oPZSvrO9w
+https://artskydj.github.io/jsPDF/docs/jsPDF.html
+https://github.com/parallax/jsPDF
+https://app.studyraid.com/en
+
+python, flask e flask-cors:
+https://roadmap.sh/
+https://docs.python.org/
+https://werkzeug.palletsprojects.com/en/stable/utils/
+https://codeshack.io/tutorials/
+https://blog.miguelgrinberg.com/index
+https://transloadit.com/devtips/
+https://stackabuse.com/search/?type=article&q=
+https://www.pullrequest.com/blog/
+https://flask-cors.readthedocs.io/en/latest/
+https://github.com/corydolphin/flask-cors
+https://pythonbasics.org/
+https://cheatsheetseries.owasp.org/
+https://codemia.io/knowledge-hub
+https://gist.github.com/markito/30a9bc2afbbfd684b31986c2de305d20
+https://sentry.io/answers/
+https://gist.github.com/rudyryk/6102448
+https://realpython.com/
+https://how.dev/
+https://flask-login.readthedocs.io/en/latest/
+https://owasp.org/www-community/
+
+mysql:
+https://dev.mysql.com/doc/refman/8.4/en/
+https://www.mysqltutorial.org/

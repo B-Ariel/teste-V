@@ -1,0 +1,156 @@
+/* ESTILIZAÇÃO GERAL
+*/
+.home * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif, arial, helvetica, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/* ESTILIZAÇÃO PARA O CORPO DO HTML
+*/
+body.home {
+    background: rgb(50, 50, 50);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+/* ESTILIZAÇÃO PARA O FORMULÁRIO
+*/
+.home form {
+    text-align: center;
+    background: rgba(100, 100, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* ESTILIZAÇÃO PARA OS TÍTULOS
+*/
+.home .titles {
+    margin: 10px;
+    color: rgb(255, 255, 255);
+}
+
+/* ESTILIZAÇÃO PARA O RÓTULO E LEGENDA DO FORMULÁRIO
+*/
+.home label,
+.home legend {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/* ESTILIZAÇÃO PARA AS MENSAGENS DE AUXÍLIO (PLACEHOLDER) NOS CAMPOS DE ENTRADA
+*/
+.home ::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+/* ESTILIZAÇÃO PARA OS CAMPOS DE ENTRADA / BOTÃO
+*/
+.home input,
+.home textarea,
+.home select {
+    padding: 5px;
+    margin: 5px;
+    border: solid rgb(0, 0, 0) 2px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* ESTILIZAÇÃO PARA OS LINKS
+*/
+.home .links {
+    padding: 5px;
+    margin: 5px;
+    border: solid rgb(0, 0, 0) 2px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    resize: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.home .links:hover {
+    background-color: rgb(50, 255, 50);
+    color: rgb(0, 0, 0);
+}
+
+.home .LinksDelete {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.home .LinksDelete:hover {
+    border: solid rgb(255, 255, 255) 2px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+}
+
+/* ESTILIZAÇÃO PARA OS CAMPOS DE ENTRADA, MAS QUANDO FOREM SELECIONADOS
+*/
+.home input:focus,
+.home textarea:focus,
+.home select:focus {
+    background-color: rgb(90, 180, 230);
+    border: solid rgb(255, 0, 0) 4px;
+    box-sizing: border-box;
+}
+
+/* ESTILIZAÇÃO PARA OS DADOS DO USUÁRIO
+*/
+.home .profile-data,
+.home .profile-field {
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    margin: 10px;
+}
+
+/* ESTILIZAÇÃO DAS DESCRIÇÕES DOS CAMPOS
+*/
+.home .profile-field label {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+/* ESTILIZAÇÃO PARA OS VALORES MOSTRADOS
+*/
+.home .profile-value {
+    background: rgba(200, 200, 200);
+    padding: 5px;
+    border-radius: 10px;
+    border: solid rgb(0, 0, 0) 2px;
+    word-break: break-word;
+}
+
+/* ESTILIZAÇÃO PARA O CAMPO DE COMENTÁRIO
+*/
+.home .comment-value {
+    white-space: pre-wrap;
+    min-height: 50px;
+}
+
+/* ESTILOS PARA MENSAGENS DE ERRO */
+.error-message {
+    color: rgb(255, 50, 50);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid red;
+    display: none;
+}
+
+/* Mostra a mensagem de erro quando houver */
+.show-error {
+    display: block;
+}

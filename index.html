@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formuário Funcional</title>
+</head>
+
+<body class="home">
+    <div class="titles">
+        <h1>FORMULÁRIO FUNCIONAL</h1>
+        <hr style="color: rgb(255, 255, 255)">
+        <br>
+        <h3>Esse projeto tem essas especificações:</h3>
+        <h3>Front-end: HTML, CSS e JS</h3>
+        <h3>Back-end: PYTHON</h3>
+        <h3>SGBD: MYSQL</h3>
+    </div><br><br>
+    <form id="loginForm">
+        <div id="errorMessage" class="error-message"></div>
+
+        <p style="color: rgb(255,255,255);">
+            JÁ TEM CONTA, ENTÃO VEJA: <br><br>
+            <a class="links" href="profile.html">MAIS INFORMAÇÕES AQUI</a>
+        </p>
+        <br><br>
+        <fieldset>
+            <legend>FAÇA LOGIN AQUI:</legend><br>
+            <h2 class="titles">Usuário e Senha</h2>
+            <input type="text" id="UserName" placeholder="Usuário" required><br>
+            <input type="password" id="PasswordUser" placeholder="Senha" required><br>
+            <br>
+            <button class="links" type="submit">Entrar</button>
+            <br><br>
+        </fieldset>
+
+        <br>
+        <p style="color: rgb(255,255,255);">NÃO TEM UMA CONTA?<br><br>
+            <a class="links" href="register.html">SE REGISTRE AQUI</a>
+        </p>
+        <br>
+    </form>
+
+    <script src="app.js"></script> <!--Carrega o JS externo-->
+</body>
+
+</html>
+<!--
+                                   __
+                                  / /
+                                 /_/
+  ______      ___          ________
+ /  __  \     |  \        /   ___  \
+ | /  \ |     |  |        |  /   \  |
+ | |  | |     |  |        |  \___/  |
+ | \__/ |     |  |____    |   ___   |
+ \______/     \______/    |__|   |__|
+   _____________       ___   ___       ________      __________        ______
+ /   __    __   \     |  |  |  |     /   __   \     |   ____   \      /  __  \
+ |  /  \  /  \  |     |  |  |  |     |  /  \  |     |  |    \   \     | /  \ |
+ |  |  |  |  |  |     |  |  |  |     |  |  |  |     |  |     |  |     | |  | |
+ |  |  |  |  |  |     |  \__/  |     |  |  |  |     |  |_____/  /     | \__/ |
+ |__|  |__|  |__|     \________/     |__|  |__|     |__________/      \______/
+ -->

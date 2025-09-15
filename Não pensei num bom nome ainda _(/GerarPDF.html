@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Textarea para PDF</title>
+
+    <!--importa a biblioteca jsPDF, ao qual gera pdf pelo front-->
+    <script src="jsPDF.js"></script>
+</head>
+
+<body>
+    <h1>Gerador de PDF a partir de Texto</h1>
+    <!--
+rows - número de linhas visíveis
+cols - especifica a largura em termos de colunas
+placeholder - texto para exemplificar
+-->
+    <textarea id="meuTexto" rows="10" cols="30"
+        placeholder="Escreva qualquer coisa com o sistema do alfabeto latino..."></textarea>
+    <br>
+
+    <!--chama a função gerarPDF() no JS com um botão-->
+    <button onclick="gerarPDF()">Gerar PDF</button>
+<script>
+    // cria a função gerarPDF
+function gerarPDF()
+{
+    const { jsPDF } = window.jspdf; // pega só a classe jsPDF do objeto global
+
+    let texto = document.getElementById("meuTexto").value; // guarda numa variável, o que o usuário digitou na área de texto
+
+    // caso o texto (variável) estiver vazio (ou só espaços), envia um alert e cancela a função
+    if (!texto.trim()) { // trim() no JS remove espaços em branco do início e fim de uma string
+        alert("Escreve algo antes, né? seu bobão");
+        return;
+    }
+
+    const doc = new jsPDF(); //cria um novo pdf na memória
+    const margemEsq = 10; // margem esquerda em milímetros
+    const margemTopo = 10; // margem superior  em milímetros
+    const alturaLinha = 8; // espaçamento entre linhas
+    const alturaPagina = doc.internal.pageSize.height; // obtém altura da página atual em mm
+    const larguraPagina = doc.internal.pageSize.width; // obtém largura da página atual em mm
+
+    // método para quebrar o texto em várias linhas para cabir na página
+    const linhas = doc.splitTextToSize(texto, larguraPagina - margemEsq * 2); // descontando as margens
+
+    let y = margemTopo; // posição vertical (y) onde o texto começa
+
+    linhas.forEach(linha => { // loop para ir em cada linha e já quebrado para inserir no pdf
+        if (y + alturaLinha > alturaPagina - margemTopo) { // vendo se a próxima linha vai ultrapassar o limite da página (alturaPagina - margemTopo)
+            doc.addPage(); // cria uma nova página pdf
+            y = margemTopo;} // Volta y para o topo da nova página
+
+        doc.text(linha, margemEsq, y); // escreve a linha no pdf na posição
+        y += alturaLinha; }); // descer a escrita para a próxima linha
+
+    doc.save("arquivo.pdf"); // gera um arquivo / manda baixar com o nome "arquivo.pdf"
+}
+</script>
+
+</body>
+
+</html>

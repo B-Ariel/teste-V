@@ -1,0 +1,134 @@
+python3 - Linguagem de programação, usada pelo back-end
+
+MySQL - Linguagem para banco de dados relacionais (sql)
+Precisa também do conector do mysql com o python: pip install mysql-connector-python
+
+Flask – Microframework escrito em Python, projetado para o desenvolvimento ágil de aplicações web.
+Ele fornece uma arquitetura minimalista, mas extensível, permitindo a construção de APIs e sistemas web de forma escalável e modular.
+Instalação: pip install Flask
+
+Flask-CORS – Extensão para o Flask que implementa de forma simplificada o CORS (Cross-Origin Resource Sharing), mecanismo que define políticas de compartilhamento de recursos entre diferentes origens (domínios).
+Essencial para aplicações web que consomem APIs externas ou interagem com front-ends hospedados em domínios distintos.
+Instalação: pip install flask-cors
+
+JsPDF - Biblioteca para criar e manipular documentos PDF com JavaScript
+
+\-\-\-\-\-\-\-\-\-\
+
+link de referência:
+html e css:
+https://www.w3schools.com/html/default.asp
+https://www.w3schools.com/css/default.asp
+https://www.w3schools.com/html/html_forms.asp
+https://www.w3schools.com/howto/howto_css_register_form.asp
+https://www.w3schools.com/howto/howto_css_login_form.asp
+https://www.youtube.com/watch?v=2O8pkybH6po&t=6s
+https://www.youtube.com/watch?v=okbByPWS1Xc&list=PLImJ3umGjxdDqTlZhQxXBeGij9Oa9Xjnj
+https://www.geeksforgeeks.org/web-templates/create-a-delete-modal-using-html-and-css/
+
+js e JsPDF:
+https://www.w3schools.com/js/default.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+https://www.w3schools.com/js/js_htmldom_html.asp
+https://www.geeksforgeeks.org/javascript/how-to-use-innerhtml-in-javascript/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+https://www.stanleyulili.com/javascript/template-literals-in-javascript-explained-like-your-twelve
+https://medium.com/%40francesco.saviano87/mastering-javascript-template-literals-b2d7cdf90a91
+https://stackoverflow.com/questions/2592092/executing-script-elements-inserted-with-innerhtml
+https://stackoverflow.com/questions/68512050/template-literals-changing-the-inner-html-of-an-element-oninput-event
+https://www.youtube.com/watch?v=e7nXia_tZ4Y
+https://www.youtube.com/watch?v=cNlJCQHSmbE&pp=ygUMZmxhc2sgcHl0aG9u
+https://www.youtube.com/watch?v=In0nB0ABaUk
+https://www.youtube.com/watch?v=VP0DS6iXbXY&list=PLImJ3umGjxdDqTlZhQxXBeGij9Oa9Xjnj&index=3
+https://dev.to/mrhdias/creating-html-templates-for-binding-json-data-with-javascript-template-literals-3p9f
+https://en.wikipedia.org/wiki/Web_storage
+https://javascript.plainenglish.io/how-to-store-json-data-in-local-storage-js-react-angular-cba97508fbc5
+https://frontend.turing.edu/lessons/module-1/json-and-localstorage.html
+https://blog.logrocket.com/localstorage-javascript-complete-guide/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+https://www.w3schools.com/jsref/jsref_tolocaledatestring.asp
+https://dev.to/rsa/perfectly-localizing-date-time-with-intl-datetimeformat-ack
+https://dev.to/ruzny_ma/simplifying-date-formatting-in-javascript-2n7o
+https://stackoverflow.com/questions/52882658/regex-for-brazilian-phone-number
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
+https://blog.stevenlevithan.com/archives/validate-phone-number
+https://www.npmjs.com/package/libphonenumber-js
+https://flask.palletsprojects.com/en/stable/patterns/javascript/
+https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
+https://www.nobledesktop.com/learn/python/javascript-fetch-flask-dynamic-api-responses
+https://medium.com/data-science/talking-to-python-from-javascript-flask-and-the-fetch-api-e0ef3573c451
+https://www.geeksforgeeks.org/python/how-to-get-data-from-api-in-python-flask/
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+https://www.w3schools.com/jsref/prop_win_localstorage.asp
+https://www.w3schools.com/jsref/met_storage_removeitem.asp
+https://zellwk.com/blog/frontend-login-system/
+https://www.telerik.com/blogs/storage-options-in-the-browser-part-1
+https://30dayscoding.com/blog/javascript-confirm-delete
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://www.geeksforgeeks.org/computer-networks/get-and-post-method-using-fetch-api/
+https://jasonwatmore.com/post/2021/09/05/fetch-http-post-request-examples
+https://stackoverflow.com/questions/9139075/how-to-show-a-confirm-message-before-delete
+https://www.youtube.com/watch?v=c3qWHnJJbSY
+https://rapidapi.com/guides/send-files-to-server-fetch
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
+https://horadecodar.com.br/como-fazer-upload-com-fetch-api-em-javascript/
+https://stackoverflow.com/questions/36067767/how-do-i-upload-a-file-with-the-js-fetch-api
+https://www.geeksforgeeks.org/javascript/simple-delete-request-using-fetch-api-by-making-custom-http-library
+https://www.youtube.com/watch?v=QKcVjdLEX_s
+https://www.youtube.com/watch?v=bBYM3KMuXC4
+https://www.youtube.com/watch?v=e_uE3WlYvYw
+https://www.freecodecamp.org/news/javascript-fetch-api-for-beginners/
+https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
+https://horadecodar.com.br/exibir-uma-mensagem-de-confirmacao-antes-de-deletar-algo-em-js/
+https://rafaelcouto.com.br/confirmacao-antes-de-deletar-registro-com-javascript/
+https://www.youtube.com/watch?v=G3oPZSvrO9w
+https://artskydj.github.io/jsPDF/docs/jsPDF.html
+https://github.com/parallax/jsPDF
+https://www.geeksforgeeks.org/html/how-to-generate-pdf-file-using-jspdf-library/
+https://app.studyraid.com/en/courses/14996/jspdf-create-pdf-documents-with-javascript
+https://stackoverflow.com/questions/67399350/how-can-i-dynamically-split-chunk-of-text-into-pages-for-jspdf
+
+python, flask e flask-cors:
+https://www.w3schools.com/python/default.asp
+https://roadmap.sh/python
+https://dev.mysql.com/doc/connector-python/en/
+https://docs.python.org/3/library/binascii.html
+https://docs.python.org/3/library/os.html
+https://docs.python.org/3/library/hashlib.html
+https://werkzeug.palletsprojects.com/en/stable/utils/
+https://docs.python.org/3/library/shutil.html
+https://medium.com/@wepypixel/python-sha256-secure-hashing-implementation-pypixel-7b8434a9b244
+https://stackoverflow.com/questions/13217016/python-3-os-urandom
+https://codeshack.io/login-system-python-flask-mysql/
+https://blog.miguelgrinberg.com/post/handling-file-uploads-with-flask
+https://flask.palletsprojects.com/en/stable/api/
+https://flask-cors.readthedocs.io/en/latest/
+https://transloadit.com/devtips/efficient-flask-file-uploads-a-step-by-step-guide/
+https://flask.palletsprojects.com/en/stable/patterns/fileuploads/
+https://stackabuse.com/step-by-step-guide-to-file-upload-with-flask/
+https://www.pullrequest.com/blog/secure-file-uploads-in-flask-filtering-and-validation-techniques
+https://flask-cors.readthedocs.io/en/v1.7.2/
+https://github.com/corydolphin/flask-cors
+https://www.geeksforgeeks.org/python/flask-tutorial/
+https://pythonbasics.org/flask-upload-file/
+https://flask.palletsprojects.com/en/stable/quickstart/
+https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+https://medium.com/@01one/create-the-simplest-static-file-download-server-with-python-flask-bd6ea3950a56
+https://codemia.io/knowledge-hub/path/how_to_serve_static_files_in_flask
+https://stackoverflow.com/questions/17681762/unable-to-retrieve-files-from-send-from-directory-in-flask
+https://gist.github.com/markito/30a9bc2afbbfd684b31986c2de305d20
+https://sentry.io/answers/difference-between-json-dumps-and-flask-jsonify/
+https://gist.github.com/rudyryk/6102448
+https://realpython.com/lessons/cryptographically-secure-random-data-python/
+https://how.dev/answers/what-is-binasciiunhexlify-in-python
+https://how.dev/answers/what-is-binasciihexlify-in-python
+https://www.geeksforgeeks.org/python/python-convert-bytearray-to-hexadecimal-string/
+https://www.mysqltutorial.org/python-mysql/
+https://flask-login.readthedocs.io/en/latest/
+https://owasp.org/www-community/attacks/SQL_Injection
+https://stackoverflow.com/questions/tagged/flask+python
+
+mysql:
+https://www.w3schools.com/sql/default.asp
+https://www.w3schools.com/mysql/default.asp
+https://dev.mysql.com/doc/refman/8.4/en/
