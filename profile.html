@@ -28,15 +28,6 @@
         </fieldset><br><br>
         <br><br><br>
 
-        <!-- mostra os outros usuarios -->
-        <fieldset>
-            <legend>OUTROS USUÁRIOS REGISTRADOS</legend>
-            <div id="listaUsuarios" class="profile-data"></div>
-            <ul id="listaNomes" style="color:white; padding: 20px; margin:10px"></ul>
-            </div>
-        </fieldset><br><br>
-        <br><br><br>
-
 
         <!-- volta pro login -->
         <p style="color: rgb(255,255,255); text-align: center;">
@@ -100,7 +91,7 @@
                 
                 <div class="profile-field">
                     <label>Nome completo:</label>
-                    <div class="profile-value">${userData.FirstName} ${userData.Surname}</div>
+                    <div class="profile-value">${userData.FirstName}</div>
                 </div>
                 
                 <div class="profile-field">
@@ -109,57 +100,11 @@
                 </div>
                 
                 <div class="profile-field">
-                    <label>Telefone:</label>
-                    <div class="profile-value">${formatPhone(userData.Telephone)}</div>
-                </div>
-                
-                <div class="profile-field">
                     <label>Data de nascimento:</label>
                     <div class="profile-value">${formatDate(userData.DateOfBirth)}</div>
                 </div>
-                
-                <div class="profile-field">
-                    <label>Gênero:</label>
-                    <div class="profile-value">${userData.Gender}</div>
-                </div>
-                
-                <div class="profile-field">
-                    <label>Comentário:</label>
-                    <div class="profile-value comment-value">${userData.CommentRecord}</div>
-                </div>
-            `;
-
+                `;
             container.innerHTML = html;
-
-
-            // busca e mostra todos os cadastrados, lista de usuários via API
-            // faz uma requisição pro back (flask) pra pegar todos os nomes e mete cada um como <li>, que ta dentro da <ul>
-            fetch("http://localhost:5000/listar_usuarios")
-                .then(response => response.json())
-                .then(data => {
-                    const ul = document.getElementById("listaNomes");
-                    if (data.status === "ok") {
-                        data.usuarios.forEach(nome => {
-                            const li = document.createElement("li");
-                            li.textContent = nome;
-                            ul.appendChild(li);
-                        });
-                    } else { // mensagem de erro
-                        ul.innerHTML = "<li>Erro ao carregar usuários</li>";
-                    }
-                })
-                .catch(error => { // mensagem de erro
-                    document.getElementById("listaNomes").innerHTML = "<li>Falha na requisição</li>";
-                    console.error("Erro ao buscar usuários:", error);
-                });
-
-
-        } else { // mensagem de nenhum usuário
-            container.innerHTML = `
-                <div style="color: white; text-align: center; padding: 20px;">
-                    <p>NENHUM USUÁRIO IDENTIFICADO<br><br></p>
-                </div>
-            `;
         }
 
 
@@ -176,7 +121,7 @@
 
             if (!confirm("Tem certeza que quer apagar essa conta? Isso é IRREVERSÍVEL!")) return; // mensagem de aviso
 
-            const response = await fetch("http://localhost:5000/deletar_conta", { // espera da requisição
+            const response = await fetch("${apiBase}/deletar_conta", { // espera da requisição
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ UserName: userData.UserName })
@@ -203,7 +148,7 @@
             formData.append("arquivo", file);
             formData.append("UserName", userData.UserName);
 
-            fetch("http://localhost:5000/upload", {
+            fetch("${apiBase}/upload", {
                 method: "POST",
                 body: formData
             })
@@ -218,7 +163,7 @@
 
         // puxa do flask os arquivos do user e cria <li> com link e botão de lixeira
         function listarArquivos() {
-            fetch(`http://localhost:5000/listar_arquivos/${userData.UserName}`)
+            fetch(`${apiBase}/listar_arquivos/${userData.UserName}`)
                 .then(res => res.json())
                 .then(data => {
                     const lista = document.getElementById("listaArquivos");
@@ -226,7 +171,7 @@
                     data.arquivos.forEach(arq => {
                         const li = document.createElement("li");
                         li.innerHTML = `
-    <a href="http://localhost:5000/download/${arq}" target="_blank">${arq}</a>
+    <a href="${apiBase}/download/${arq}" target="_blank">${arq}</a>
     <button onclick="event.preventDefault(); deletarArquivo('${arq}')"
             style="margin-left: 10px;">🗑️</button>
 `;
@@ -240,7 +185,7 @@
         function deletarArquivo(nomeArquivo) {
             if (!confirm(`Deseja mesmo apagar o arquivo "${nomeArquivo}"?`)) return; // mensagem de aviso
 
-            fetch("http://localhost:5000/deletar_arquivo", {
+            fetch("${apiBase}/deletar_arquivo", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -261,7 +206,7 @@
         function resetarArquivos() {
             if (!confirm("Tem certeza que quer resetar seus arquivos? Isso vai apagar os atuais!")) return; // mensagem de aviso
 
-            fetch("http://localhost:5000/resetar_arquivos", {
+            fetch("${apiBase}/resetar_arquivos", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ UserName: userData.UserName })

@@ -37,31 +37,11 @@
             <input type="text" id="FirstName" name="FirstName" required placeholder="NOME AQUI..."
                 maxlength="50"><br><br>
 
-            <label for="Surname">Sobrenome:</label><br>
-            <input type="text" id="Surname" name="Surname" placeholder="SOBRENOME AQUI..." maxlength="50"><br><br>
-
             <label for="Email">E-mail:</label><br>
             <input type="email" id="Email" name="Email" placeholder="E-MAIL AQUI..." required maxlength="50"><br><br>
 
-            <label for="Telephone">Telefone:</label><br>
-            <!--pattern="[0-9]{11}" - obriga número com 11 dígitos (BR style)-->
-            <input type="tel" id="Telephone" name="Telephone" placeholder="TELEFONE AQUI..." pattern="[0-9]{11}"
-                required maxlength="11"><br><br>
-
             <label for="DateOfBirth">data de nascimento:</label><br>
-            <input type="date" id="DateOfBirth" name="DateOfBirth" min="1900-01-01" max="2100-01-01" required><br><br>
-
-            <label for="Gender">Gênero:</label><br>
-            <select name="Gender" id="Gender" required>
-                <option disabled>NÃO ESPECIFICADO</option>
-                <option value="NÃO DECLARAR">NÃO DECLARAR</option>
-                <option value="HOMEM">HOMEM</option>
-                <option value="MULHER">MULHER</option>
-                <option value="OUTRO">OUTRO</option>
-            </select><br><br>
-
-            <textarea name="CommentRecord" id="CommentRecord" rows="10" cols="30" maxlength="500" required
-                placeholder="Digite aqui algum comentário..."></textarea><br><br>
+            <input type="date" id="DateOfBirth" name="DateOfBirth" min="1900-01-01" max="2024-12-31" required><br><br>
 
             <input class="links" type="submit" value="Enviar">
             <input class="links" type="reset" value="Limpar">

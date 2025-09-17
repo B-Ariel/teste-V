@@ -17,15 +17,12 @@ document.querySelector("form").addEventListener("submit", async function (e) {
         UserName: document.getElementById("UserName").value,
         PasswordUser: document.getElementById("PasswordUser").value,
         FirstName: document.getElementById("FirstName").value,
-        Surname: document.getElementById("Surname").value,
         Email: document.getElementById("Email").value,
-        Telephone: document.getElementById("Telephone").value,
-        DateOfBirth: document.getElementById("DateOfBirth").value,
-        Gender: document.getElementById("Gender").value,
-        CommentRecord: document.getElementById("CommentRecord").value
+        DateOfBirth: document.getElementById("DateOfBirth").value
     };
 
-    const url = isLogin ? "http://localhost:5000/login" : "http://localhost:5000/enviar"; // define a rota do servidor
+    const apiBase = "http://msmqt-2804-d41-c028-900-808e-b72d-22b1-bd66.a.free.pinggy.link"; // URL do túnel gerada
+    const url = isLogin ? `${apiBase}/login` : `${apiBase}/enviar`; // define a rota do servidor
 
 
     try {

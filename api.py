@@ -13,17 +13,12 @@ from werkzeug.utils import secure_filename # substitui o nome do arquivo (endere
 import shutil # manipula cópias de arquivos
 
 UPLOAD_FOLDER = 'uploads' # pasta onde os arquivos vão
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif', 'mp4'} # Lista das extensões permitidas
 
 app = Flask(__name__) # inicia a aplicação Flask
 CORS(app) # habilita CORS para todos
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER # registra a pasta no config do Flask
 os.makedirs(UPLOAD_FOLDER, exist_ok=True) # cria a pasta uploads, se não existir
-
-# verifica se o arquivo tem extensão, e se essa extensão tá na lista das permitidas
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/upload', methods=['POST']) # recebe arquivos via POST
 def upload_arquivo(): # se não tiver arquivo, mostra o erro
@@ -33,7 +28,7 @@ def upload_arquivo(): # se não tiver arquivo, mostra o erro
     file = request.files['arquivo'] # pega o arquivo enviado
     username = request.form.get('UserName') # pega o nome do usuário no formulário
 
-    if file and allowed_file(file.filename): # se o arquivo for válido, renomeia com o nome do usuario na frente do arquivo
+    if file: # se o arquivo for válido, renomeia com o nome do usuario na frente do arquivo
         filename = secure_filename(f"{username}_{file.filename}")
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(filepath) # salva, e retorna sucesso
@@ -94,20 +89,16 @@ def salvar_dados():
     # Inserir novo usuário
     sql = """ -- insere no banco de dados com sql as informações
         INSERT INTO informacoes 
-        (UserName, PasswordUser, FirstName, Surname, Email, Telephone, DateOfBirth, Gender, CommentRecord)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+        (UserName, PasswordUser, FirstName, Email, DateOfBirth)
+        VALUES (%s, %s, %s, %s, %s)
     """
     # recebe JSON com os dados do usuário
     valores = (
         data['UserName'],
         hashed_password,
         data['FirstName'],
-        data['Surname'],
         data['Email'],
-        data['Telephone'],
-        data['DateOfBirth'],
-        data['Gender'],
-        data['CommentRecord']
+        data['DateOfBirth']
     )
     try:
         cursor.execute(sql, valores)
@@ -184,21 +175,6 @@ def deletar_conta():
         return jsonify({'mensagem': 'Conta e arquivos deletados com sucesso.', 'status': 'ok'})
     except Exception as e: # mensagem de erro
         return jsonify({'mensagem': f'Erro ao deletar conta: {str(e)}', 'status': 'erro'}), 500
-    finally:
-        cursor.close()
-        conn.close()
-
-@app.route('/listar_usuarios', methods=['GET']) # puxa todos usernames do banco e retorna em JSON
-def listar_usuarios():
-    conn = conecta_db()
-    cursor = conn.cursor()
-    try:
-        cursor.execute("SELECT UserName FROM informacoes ORDER BY UserName ASC") # busca os nomes de usuário no banco de dados
-        usuarios = [linha[0] for linha in cursor.fetchall()]
-        # mensagem de sucesso
-        return jsonify({'usuarios': usuarios, 'status': 'ok'})
-    except Exception as e: # mensagem de erro
-        return jsonify({'mensagem': f'Erro ao listar usuários: {str(e)}', 'status': 'erro'}), 500
     finally:
         cursor.close()
         conn.close()
