@@ -21,7 +21,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
         DateOfBirth: document.getElementById("DateOfBirth").value
     };
 
-    const apiBase = "http://vwfrz-2804-d41-c028-900-808e-b72d-22b1-bd66.a.free.pinggy.link"; // URL do túnel gerada
+    const apiBase = "https://owpwt-2804-d41-c028-900-808e-b72d-22b1-bd66.a.free.pinggy.link"; // URL do túnel gerada
     const url = isLogin ? `${apiBase}/login` : `${apiBase}/enviar`; // define a rota do servidor
 
 
